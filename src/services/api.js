@@ -4,7 +4,7 @@
 //  Mock mode: set VITE_MOCK_API=true in .env (default: true)
 // ============================================================
 
-const BASE_URL = '/api'
+const BASE_URL = 'http://127.0.0.1:8080'
 const USE_MOCK = true  // flip to false when backend is ready
 
 // ---- Helpers -----------------------------------------------

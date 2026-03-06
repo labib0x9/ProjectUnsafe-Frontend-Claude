@@ -81,6 +81,9 @@ In `src/services/api.js`, change:
 ```js
 const USE_MOCK = true   // change to false
 ```
+```js
+const BASE_URL = 'http://127.0.0.1:8080'
+```
 
 The API expects these endpoints:
 
