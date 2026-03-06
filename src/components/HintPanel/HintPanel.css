@@ -1,0 +1,75 @@
+.hint-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hint-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hint-count { font-size: 11px; }
+
+.hint-load-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.hints-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hint-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.hint-item-header {
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: var(--bg-surface);
+  transition: background var(--transition);
+}
+.hint-item.hidden .hint-item-header:hover {
+  background: var(--bg-elevated);
+}
+
+.hint-num {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+
+.hint-reveal-btn {
+  font-size: 11px;
+  color: var(--accent-green);
+  opacity: 0.7;
+}
+
+.hint-content {
+  padding: 10px 12px;
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  background: var(--bg-input);
+  border-top: 1px solid var(--border);
+}
+
+.hint-arrow {
+  color: var(--accent-green);
+  flex-shrink: 0;
+}

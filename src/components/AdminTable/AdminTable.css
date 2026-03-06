@@ -1,0 +1,72 @@
+.admin-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.admin-table th {
+  padding: 10px 16px;
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+  font-weight: 500;
+}
+
+.admin-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+.admin-table tr:last-child td { border-bottom: none; }
+.admin-table tr:hover td { background: var(--bg-elevated); }
+
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+}
+
+.container-id {
+  font-family: var(--font-mono);
+  color: var(--accent-blue);
+  font-size: 12px;
+  background: rgba(88,166,255,0.08);
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.port-num {
+  color: var(--accent-purple);
+}
+
+.time-ago {
+  color: var(--text-muted);
+}
+
+.status-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.status-running { color: var(--accent-green); background: rgba(0,255,136,0.08); border: 1px solid var(--accent-green); }
+.status-stopped { color: var(--text-muted);   background: var(--bg-elevated);  border: 1px solid var(--border); }
+
+.admin-table-empty {
+  padding: 40px;
+  text-align: center;
+}

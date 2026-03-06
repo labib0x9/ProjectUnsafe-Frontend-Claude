@@ -1,0 +1,93 @@
+.navbar {
+  background: rgba(8,11,15,0.95);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+
+.navbar-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar-logo {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo-bracket { color: var(--text-muted); }
+.logo-text { color: var(--text-primary); margin: 0 1px; }
+.logo-unsafe { color: var(--accent-green); }
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav-link {
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all var(--transition);
+  font-family: var(--font-mono);
+}
+.nav-link-prefix { color: var(--text-muted); font-size: 11px; }
+.nav-link:hover { color: var(--text-primary); background: var(--bg-elevated); }
+.nav-link.active { color: var(--accent-green); background: rgba(0,255,136,0.08); }
+.nav-link.active .nav-link-prefix { color: var(--accent-green-dim); opacity: 0.6; }
+.nav-link-admin { color: var(--accent-orange) !important; }
+.nav-link-admin:hover { background: rgba(255,140,0,0.08) !important; }
+
+.navbar-auth {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.navbar-user-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+}
+
+.user-role-badge {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.user-name {
+  font-size: 13px;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 768px) {
+  .navbar-links { display: none; }
+  .navbar-inner { padding: 0 16px; }
+}

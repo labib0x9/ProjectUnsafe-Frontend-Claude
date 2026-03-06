@@ -1,0 +1,120 @@
+.dashboard-page { display: flex; flex-direction: column; gap: 24px; }
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  font-family: var(--font-display);
+}
+
+.anon-warning {
+  font-size: 13px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
+}
+
+.recent-labs-card {
+  grid-column: 1 / -1;
+}
+
+/* Account card */
+.account-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.account-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.account-row:last-child { border-bottom: none; }
+.account-key { font-family: var(--font-mono); font-size: 12px; }
+.account-val { font-family: var(--font-mono); }
+
+/* Container card */
+.container-status-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.container-lab-name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+.container-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.no-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Recent labs */
+.recent-labs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.recent-lab-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.recent-lab-item:last-child { border-bottom: none; }
+.recent-lab-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.recent-lab-title {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+.recent-lab-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.recent-lab-status {
+  font-size: 12px;
+  font-family: var(--font-mono);
+}
+.status-completed   { color: var(--accent-green); }
+.status-in-progress { color: var(--accent-yellow); }
+
+@media (max-width: 768px) {
+  .dashboard-grid { grid-template-columns: 1fr; }
+  .recent-labs-card { grid-column: 1; }
+}

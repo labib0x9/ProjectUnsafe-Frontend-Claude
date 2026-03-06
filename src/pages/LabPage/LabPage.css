@@ -1,0 +1,182 @@
+.lab-page {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  height: calc(100vh - 56px);
+  overflow: hidden;
+}
+
+.lab-page.lab-page-solo {
+  grid-template-columns: 560px;
+  justify-content: center;
+  background: var(--bg-void);
+}
+
+/* Left panel */
+.lab-left-panel {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  background: var(--bg-surface);
+}
+
+.lab-left-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.back-link {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.back-link:hover { color: var(--text-secondary); }
+
+.lab-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.lab-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.lab-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.lab-tag {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  padding: 2px 6px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+/* Tabs */
+.lab-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.lab-tab {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.lab-tab:hover { color: var(--text-primary); }
+.lab-tab.active {
+  color: var(--accent-green);
+  border-bottom-color: var(--accent-green);
+}
+
+/* Description */
+.lab-description-body {
+  padding: 20px;
+  flex: 1;
+}
+.lab-long-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  white-space: pre-line;
+}
+.lab-info-chips {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.lab-info-chip {
+  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* Hints */
+.lab-hints-body {
+  padding: 20px;
+  flex: 1;
+}
+
+/* Control panel */
+.lab-control-panel {
+  padding: 20px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-card);
+  margin-top: auto;
+}
+
+.container-info-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.control-btn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.copy-cmd-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.start-lab-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+}
+
+.lab-guest-msg {
+  padding: 4px 0;
+}
+
+/* Right panel */
+.lab-right-panel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 16px;
+  background: var(--bg-void);
+}
+.lab-right-panel .terminal-wrapper {
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .lab-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: auto;
+  }
+  .lab-left-panel { max-height: 60vh; }
+  .lab-right-panel { height: 60vh; }
+}

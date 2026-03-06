@@ -1,0 +1,88 @@
+.labs-page { display: flex; flex-direction: column; gap: 24px; }
+
+.labs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.labs-title {
+  font-size: 28px;
+  font-family: var(--font-display);
+}
+
+.labs-sub { font-size: 14px; margin-top: 4px; }
+
+.labs-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.labs-search {
+  max-width: 240px;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+
+.filter-btn {
+  padding: 4px 10px;
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  transition: all var(--transition);
+}
+.filter-btn:hover { border-color: var(--border-bright); color: var(--text-primary); }
+.filter-btn.active { border-color: var(--accent-green); color: var(--accent-green); background: rgba(0,255,136,0.08); }
+.filter-btn.filter-easy.active   { border-color: var(--diff-easy);   color: var(--diff-easy);   background: rgba(0,255,136,0.08); }
+.filter-btn.filter-medium.active { border-color: var(--diff-medium); color: var(--diff-medium); background: rgba(240,192,0,0.08); }
+.filter-btn.filter-hard.active   { border-color: var(--diff-hard);   color: var(--diff-hard);   background: rgba(255,68,68,0.08); }
+
+.labs-loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.labs-count {
+  font-size: 12px;
+  font-family: var(--font-mono);
+}
+
+.labs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.labs-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px;
+  font-size: 14px;
+}
